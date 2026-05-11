@@ -1,17 +1,12 @@
 #include <iostream>
 #include "raylib.h"
+#include "Game.hpp"
 int main(){
-    int screenWidth = 800;
-    int screenHeight = 600;
+    int screenWidth = 900;
+    int screenHeight = 900;
+    Game game(screenWidth, screenHeight);
+    game.Init();
+    game.Draw();
 
-    InitWindow(screenWidth, screenHeight, "Tic Tac Toe");
-
-    while(!WindowShouldClose()){
-        BeginDrawing();
-        ClearBackground(WHITE);
-        
-        EndDrawing();
-    }
-    CloseWindow();
     return 0;
 }
