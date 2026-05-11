@@ -1,3 +1,6 @@
+#pragma once
+#include "Board.hpp"
+
 class Game{
     private:
         int screenWidth;
@@ -6,7 +9,7 @@ class Game{
     public:
         Game(int screenWidth, int screenHeight);
         void Init();
-        void Update();
+        void Update(Board &board);
         void Draw();
 
 };
