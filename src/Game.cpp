@@ -20,9 +20,9 @@ void Game::Update(Board &board, RenderTexture2D &canvas, int (&tab)[9]){
             BeginTextureMode(canvas);
             if(!swapPlayer){
                 DrawLineEx({square.x, square.y}, 
-                    {square.x + sizeOfSquare,square.y + sizeOfSquare }, 10.0,RED);
+                    {square.x + sizeOfSquare,square.y + sizeOfSquare }, 10.0,BLUE);
                 DrawLineEx({square.x, square.y + sizeOfSquare}, 
-                    {square.x + sizeOfSquare, square.y}, 10.0, RED);
+                    {square.x + sizeOfSquare, square.y}, 10.0, BLUE);
                 tab[i] = 1;
             }else if (swapPlayer){
                 DrawCircleV({square.x + (sizeOfSquare/2), square.y + (sizeOfSquare/2)},
@@ -34,7 +34,7 @@ void Game::Update(Board &board, RenderTexture2D &canvas, int (&tab)[9]){
             EndTextureMode();
             swapPlayer = !swapPlayer;
         }
-
+        
     }
  
 }
@@ -75,10 +75,10 @@ void Game::Draw(){
             ClearBackground(BLANK);
             if (winner == 1) {
                 DrawText("Cross Won", screenWidth /2 - 130, screenHeight /2 - 50, 
-                    50, BLUE);
+                    50, GREEN);
                 } else {
                     DrawText("Circle Won", screenWidth /2 - 130, screenHeight /2 - 50,
-                        50, BLUE);
+                        50, GREEN);
                 }
             EndTextureMode();
         }
