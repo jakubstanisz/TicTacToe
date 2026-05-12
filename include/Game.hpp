@@ -9,7 +9,7 @@ class Game{
     public:
         Game(int screenWidth, int screenHeight);
         void Init();
-        void Update(Board &board);
+        void Update(Board &board, RenderTexture2D &canvas, int (&tab)[9]);
         void Draw();
 
 };

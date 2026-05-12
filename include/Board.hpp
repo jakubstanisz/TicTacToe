@@ -8,6 +8,6 @@ class Board{
         Board();
         void CreateBoard();
         void Update();
+        int CheckIfEnd(int (&tab)[9]);
         
-
 };
